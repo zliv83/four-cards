@@ -1,0 +1,70 @@
+@import '@/styles/__settings.scss';
+
+$cardWidth: toRem(350);
+$cardHeight: toRem(250);
+
+@mixin cardDimensions() {
+  width: $cardWidth;
+  height: $cardHeight;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include center();
+
+  .hero {
+    padding: toRem(85) toRem(32) 0 toRem(32);
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    padding: toRem(78) toRem(32);
+    gap: toRem(25);
+  }
+
+  @include desktop() {
+    .hero {
+      padding: toRem(80) toRem(450) 0 toRem(450);
+    }
+
+    .cards {
+      position: relative;
+      padding: 0;
+      margin-top: toRem(64);
+      margin-bottom: toRem(80);
+      width: toRem(1110);
+      height: toRem(250 * 2 + 30);
+
+      .cardOne {
+        position: absolute;
+        top: calc(50% - $cardHeight/2);
+        left: 0;
+        @include cardDimensions();
+      }
+
+      .cardTwo {
+        position: absolute;
+        top: 0;
+        left: calc(50% - $cardWidth/2);
+        @include cardDimensions();
+      }
+
+      .cardThree {
+        position: absolute;
+        top: 50%;
+        left: calc(50% - $cardWidth/2);
+        @include cardDimensions();
+      }
+
+      .cardFour {
+        position: absolute;
+        top: calc(50% - $cardHeight/2);
+        right: 0;
+        @include cardDimensions();
+      }
+    }
+  }
+}
