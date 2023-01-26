@@ -1,0 +1,44 @@
+@import '@/styles/__settings.scss';
+
+.card {
+  background: #ffffff;
+  box-shadow: $box-shadow-full;
+  height: 100%;
+  width: 100%;
+  border-radius: toRem(8);
+
+  .topThing {
+    width: 100%;
+    height: toRem(3.55);
+    border-radius: toRem(8) toRem(8) 0 0;
+  }
+
+  .contents {
+    display: flex;
+    flex-direction: column;
+    padding: toRem(27) toRem(28) toRem(28) toRem(29);
+
+    .title {
+      font-weight: 600;
+      font-size: toRem(20);
+      line-height: toRem(30);
+      color: $navy;
+    }
+
+    .subTitle {
+      margin-top: toRem(1);
+      font-weight: 400;
+      font-size: toRem(13);
+      line-height: toRem(23);
+      letter-spacing: toRem(0.0902778);
+      color: $navy;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+
+    .iconBox {
+      margin-top: toRem(33);
+      margin-left: toRem(226);
+    }
+  }
+}

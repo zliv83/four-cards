@@ -1,0 +1,58 @@
+@import '@/styles/__settings.scss';
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 0 toRem(8) 0 toRem(8);
+  gap: toRem(16);
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(1);
+    width: 100%;
+    @include center();
+    color: $navy;
+
+    .titleOne {
+      font-weight: 200;
+      font-size: toRem(24);
+      line-height: toRem(36);
+      letter-spacing: toRem(0.166667);
+    }
+
+    .titleTwo {
+      font-weight: 600;
+      font-size: toRem(24);
+      line-height: toRem(36);
+      letter-spacing: 0.166667px;
+    }
+  }
+
+  .subTitle {
+    font-weight: 400;
+    font-size: toRem(15);
+    line-height: toRem(25);
+    text-align: center;
+    letter-spacing: toRem(0.104167);
+    opacity: 0.5;
+  }
+
+  @include desktop() {
+    .title {
+      gap: toRem(2);
+
+      .titleOne {
+        font-size: toRem(36);
+        line-height: toRem(54);
+        letter-spacing: toRem(0.25);
+      }
+
+      .titleTwo {
+        font-size: toRem(36);
+        line-height: toRem(54);
+        letter-spacing: toRem(0.25);
+      }
+    }
+  }
+}
