@@ -7,7 +7,7 @@ export default function Home() {
     {
       title: 'Supervisor',
       subTitle: 'Regularly evaluates our talent to ensure quality',
-      icon: '/icon-karma.svg',
+      icon: '/icon-supervisor.svg',
       color: '#44D3D2',
       className: styles.cardOne,
     },
